@@ -1,0 +1,70 @@
+/******* Diese CSS Befehle greifen für alle Displaygrößen ******/
+
+/*** Inhalt bekommt ein Hintergrundbild das zentriert 
+     fixiert und in Vollbild angezeigt wird***/
+body {
+    background-image: url(./bilder/sunset.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+/*** Inhalt bekommt eine feste Breite ***/
+header img {
+    width: 100px;
+}
+
+/*** Inhalt bekommt eine feste Breite einen inneren Abstand
+     eienen Rahmen und abgerundete Ecken***/
+main img {
+    width: 75%;
+    padding: 25px;
+    border-radius: 40px;
+    box-shadow: 8px 8px 10px black;
+}
+
+/*** Inhalt bekommt einene inneren abstand ***/
+main p {
+    padding: 15px;
+}
+
+/*** Inhalt bekommt einen linearen Farbverlauf ***/
+main .box-1,
+main .box-3 {
+    background-image: linear-gradient(120deg,
+            orange,
+            orangered,
+            yellow,
+            red,
+            orange,
+            orangered,
+            yellow,
+            red);
+}
+
+/*** Inhalt bekommt einen runden Farbverlauf ***/
+main .box-2,
+main .box-4 {
+    background-image: radial-gradient(circle,
+            blue,
+            aqua,
+            green,
+            blue,
+            aqua,
+            green);
+}
+
+/*** Inhalt bekommt einen kegelförmigen Farbverlauf ***/
+main .box-5 {
+    background-image: conic-gradient(yellow,
+            green,
+            yellow,
+            green,
+            yellow,
+            green);
+}
+
+/*** Inhalt bekommt eine feste Breite ***/
+footer img {
+    width: 50px;
+}

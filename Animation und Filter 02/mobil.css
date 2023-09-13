@@ -1,0 +1,56 @@
+/****** Diese CSS Befehle greifen bis zu einer maximalen Displaygröße von 599 Pixeln *******/
+@media screen and (max-width: 599px){
+
+/*** Inhalt wird flexibel und horizontal zentriert
+     bekommt einen Rahmen und inneren Abstand ***/
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-bottom: solid 1px black;
+        padding-bottom: 20px;
+    }
+/*** Inhalt wird flexibel mit Raum dazwischen
+     Text wird horizontal zentriert
+     bekommt einen Rahmen und inneren Abstand ***/
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-bottom: solid 1px black;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    /*** Die Helligkeit des Inhalts wird geändert ***/
+    main .box-4 img{
+        filter: brightness(5);
+        transition: 1s;
+    }
+    /*** Inhalt ändert die Breite und entfernt den Filter
+         wenn die Maus drauf ist ***/
+    main .box-4 img:hover{
+        width: 200px;
+        filter: none;
+    }
+    /*** Die Farbe des Inhalts wird umgekehrt ***/
+    main .box-5 img{
+        filter: invert(5);
+        transition: 2s;
+    }
+    /*** Inhalt ändert die Breite und entfernt den Filter
+         wenn die Maus drauf ist ***/
+    main .box-5 img:hover{
+        width: 200px;
+        filter: none;
+    }
+    /*** der Inhalt wird flexibel und
+         horizontal zentriert und bekommt 
+        einen inneren Abstand ***/
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    
+}

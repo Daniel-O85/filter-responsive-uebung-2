@@ -1,0 +1,97 @@
+/******* Diese CSS Befehlen greifen ab einer Displaygröße von mindestens 600 Pixeln ******/
+@media screen and (min-width: 600px){
+
+/***** Kopfzeile ******/
+
+/*** Inhalt hat 3 Spalten und ist vertikal zentriert ***/
+    header{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        align-items: center;
+    }
+    /*** Inhalt startet in Spalte 3 ***/
+    header input{
+        grid-column-start: 3;
+    }
+
+    /**** Hauptinhalt ****/
+    main{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        text-align: center;
+    }
+    /****** Rand, äusserer abstand, innerer abstand ********/
+    main div{
+        border: solid black 1px;
+        margin: 5px;
+        padding: 15px;
+    }
+    /***** Inhalt startet in Spalte 3 ******/
+    main .box-1{
+        grid-column-end: span 3;
+    }
+    /***** Inhalt ist flexibel, zentriert und auf 3 Zeilen gestreckt *****/
+    main .box-2{
+        grid-row-end: span 3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    /*** Inhalt startet in Spalte 2 und wird 
+         auf 2 Spalten und 2 Zeilen gestreckt ***/
+    main .box-3{
+        grid-column-start: 2;
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+    }
+    /*** Inhalt startet auf Zeile 2 ***/
+    main .box-4{
+        grid-row-start: 2;
+    }
+    /*** Inhalt wird verschwommen angezeigt ***/
+    main .box-4 img{
+        filter:blur(3px);
+        transition: 1s;
+    }
+    /*** Inhalt ändert die Breite und entfernt den Filter
+         wenn die Maus drauf ist ***/
+    main .box-4 img:hover{
+        width: 500px;
+        filter: none;
+    }
+    /*** Inhalt wird Sepia angezeigt ***/
+    main .box-5 img{
+        filter: sepia(1);
+        transition: 1s;
+    }
+     /*** Inhalt ändert die Breite und entfernt den Filter
+         wenn die Maus drauf ist ***/
+    main .box-5 img:hover{
+        width: 400px;
+        filter: none;
+    }
+
+    /*** Fußzeile ***/
+
+    /*** Inhalt hat 2 Spalten ***/
+    footer{
+        display: grid;
+        grid-template-columns: 66% 33%;
+    }
+    /*** Inhalt wird flexibel und startet von links ***/
+    footer .footer-img{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    /*** Inhalt hatt einen inneren Abstand ***/
+    footer .footer-img img{
+        padding: 10px;
+    }
+    /*** Inhalt hat einen inneren Abstand und
+         wird auf 2 Zeilen gestreckt ***/
+    footer .footer-para{
+        grid-row-end: span 2;
+        padding: 10px;
+    }
+}
